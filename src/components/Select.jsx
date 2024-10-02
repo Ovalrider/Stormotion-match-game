@@ -32,7 +32,7 @@ const CustomSelect = () => {
       setWhoGoesFirst("Player");
   };
   return (
-    <div className='flex flex-col justify-end items-end w-full h-full mb-12 pr-12'>
+    <div className='flex flex-col justify-end items-end w-full h-full pr-12'>
       <Fab color="primary">
         <Settings onClick={toggleDrawer(true)} sx={{boxShadow:"none", width: 30,
         height: 30}} className="transition-transform duration-500 hover:animate-spin"/>
@@ -46,7 +46,7 @@ const CustomSelect = () => {
       <div className="flex justify-center items-center mt-5 gap-80" style={{minWidth:"500"}}>
         <div className="flex flex-col items-center">
         <Fab color="primary" sx={{boxShadow:"none", width: 120,      
-        height: 120}} disabled={whoGoesFirst ==="Ai"} onClick={handleChange} className="transition ease-in-out hover:scale-105 disabled:opacity-75">
+        height: 120}} disabled={whoGoesFirst !=="Ai"} onClick={handleChange} className="transition ease-in-out hover:scale-105 disabled:opacity-75">
         <Person sx={{boxShadow:"none", width: 70,  
         height: 70}}/>
       </Fab>
@@ -55,7 +55,7 @@ const CustomSelect = () => {
         <h1 className="text-3xl mb-5">Who goes first?</h1>
       <div className="flex flex-col items-center ">
       <Fab color="primary"  sx={{boxShadow:"none", width: 120,      
-        height: 120}} disabled={whoGoesFirst ==="Player"} onClick={handleChange} className="hover:scale-105 disabled:opacity-75" >
+        height: 120}} disabled={whoGoesFirst !=="Player"} onClick={handleChange} className="hover:scale-105 disabled:opacity-75" >
         <SmartToy sx={{boxShadow:"none", width: 70,    
         height: 70}}/>
       </Fab>
