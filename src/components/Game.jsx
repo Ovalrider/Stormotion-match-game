@@ -2,8 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useGameSettings } from "../context/GameSettings";
 import CustomButton from "./Button";
 import { GiMatchHead } from "react-icons/gi";
-import { Box, Card, CardContent, Typography } from "@mui/material";
-
+import { Box, Card, CardContent } from "@mui/material";
 
 const AI_TURN_TIME = 1000;
 
@@ -62,7 +61,6 @@ const Game = () => {
 
   useEffect(() => {
     let winningMove = aiCanWin();
-    console.log(winningMove);
     if (matches === 0) {
       setGameOver(true);
       setWinner(
@@ -113,11 +111,13 @@ const Game = () => {
             ? "Ai wins!"
             : "It's a draw!"}
         </p>
-      ) : <p className="text-xl mt-5">&nbsp;</p>}
+      ) : (
+        <p className="text-xl mt-5">&nbsp;</p>
+      )}
       <Box
         height="150px"
         className="flex items-center justify-evenly max-h-screen  mt-16 gap-40"
-        sx={{marginTop:-1}}
+        sx={{ marginTop: -1 }}
       >
         <Card variant="outlined" sx={{ width: 400, height: 600 }}>
           <CardContent>
@@ -143,7 +143,10 @@ const Game = () => {
           </CardContent>
         </Card>
       </Box>
-      <div className=" flex flex-col justify-evenly items-center gap-16" style={{marginTop:"-100px"}}>
+      <div
+        className=" flex flex-col justify-evenly items-center gap-16"
+        style={{ marginTop: "-100px" }}
+      >
         {[1, 2, 3].map((num) => (
           <CustomButton
             key={num}
@@ -154,7 +157,6 @@ const Game = () => {
           </CustomButton>
         ))}
       </div>
-      
 
       <div className="fixed bottom-0 left-0 right-0 text-center mb-0 p-9 bg-gray-200 border border-solid border-gray-400">
         <CustomButton className="text-2xl" onClick={() => resetGame()}>

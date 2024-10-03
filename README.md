@@ -1,8 +1,9 @@
-# React + Vite
+# Matchgame
+## One-pile modified Nim game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Implemented base requirements + bonus task(Ai can go first)
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### To run
+**1. Clone to wherever you like.
+**2. npm install.
+**3. npm run dev.
