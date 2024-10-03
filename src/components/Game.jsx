@@ -119,7 +119,7 @@ const Game = () => {
         className="flex items-center justify-evenly max-h-screen  mt-16 gap-40"
         sx={{ marginTop: -1 }}
       >
-        <Card variant="outlined" sx={{ width: 400, height: 600 }}>
+        <Card variant="outlined" sx={{ width: 400, height: 500 }}>
           <CardContent>
             <Box className="flex flex-col gap-14 mt-10  " alignItems="center">
               <p className="text-6xl" style={{ fontSize: "11rem" }}>
@@ -131,7 +131,7 @@ const Game = () => {
           </CardContent>
         </Card>
 
-        <Card variant="outlined" sx={{ width: 400, height: 600 }}>
+        <Card variant="outlined" sx={{ width: 400, height: 500 }}>
           <CardContent>
             <Box className="flex flex-col gap-14 mt-10" alignItems="center">
               <p className="text-6xl " style={{ fontSize: "11rem" }}>
@@ -144,7 +144,7 @@ const Game = () => {
         </Card>
       </Box>
       <div
-        className=" flex flex-col justify-evenly items-center gap-16"
+        className=" flex flex-col justify-evenly items-center gap-10"
         style={{ marginTop: "-100px" }}
       >
         {[1, 2, 3].map((num) => (
