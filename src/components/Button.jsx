@@ -1,10 +1,17 @@
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 
-
-const CustomButton = ({children, onClick, type, disabled}) => {
+const CustomButton = ({ children, onClick, type, disabled }) => {
   return (
-    <Button variant="contained" className="max-w-64 w-full h-8" disabled={disabled} onClick={onClick} type={type ? "type" : undefined}>{children}</Button>
-  )
-}
+    <Button
+      variant="contained"
+      className="max-w-64 w-full h-9"
+      disabled={disabled}
+      onClick={onClick}
+      type={type ? type : "button"}
+    >
+      {children}
+    </Button>
+  );
+};
 
-export default CustomButton
+export default CustomButton;

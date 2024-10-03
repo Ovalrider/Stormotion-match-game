@@ -1,4 +1,4 @@
-import { useGameSettings } from "../context/GameSettings";
+import { useGameSettings } from "../context/gameSettingsContext";
 import { Person } from "@mui/icons-material";
 import { SmartToy } from "@mui/icons-material";
 import { Fab } from "@mui/material";
@@ -6,6 +6,7 @@ import Drawer from "@mui/material/Drawer";
 import { useState } from "react";
 import { Settings } from "@mui/icons-material";
 import "../index.css";
+import PlayerIconButton from "./PlayerIconButton";
 
 const CustomSelect = () => {
   const { whoGoesFirst, setWhoGoesFirst } = useGameSettings();
@@ -39,35 +40,21 @@ const CustomSelect = () => {
           className="flex justify-center items-center mt-5 gap-80"
           style={{ minWidth: "500" }}
         >
-          <div className="flex flex-col items-center">
-            <Fab
-              color="primary"
-              sx={{ boxShadow: "none", width: 120, height: 120 }}
-              disabled={whoGoesFirst !== "Ai"}
-              onClick={handleChange}
-              className="transition ease-in-out hover:scale-105 disabled:opacity-75"
-            >
-              <Person sx={{ boxShadow: "none", width: 70, height: 70 }} />
-            </Fab>
-            <label htmlFor="goesFirst" className="pt-3 text-3xl">
-              Player
-            </label>
-          </div>
+          <PlayerIconButton
+            whoGoesFirst={whoGoesFirst}
+            onClick={handleChange}
+            player="Ai"
+          >
+            <Person sx={{ boxShadow: "none", width: 70, height: 70 }} />
+          </PlayerIconButton>
           <h1 className="text-3xl mb-5">Who goes first?</h1>
-          <div className="flex flex-col items-center ">
-            <Fab
-              color="primary"
-              sx={{ boxShadow: "none", width: 120, height: 120 }}
-              disabled={whoGoesFirst !== "Player"}
-              onClick={handleChange}
-              className="hover:scale-105 disabled:opacity-75"
-            >
-              <SmartToy sx={{ boxShadow: "none", width: 70, height: 70 }} />
-            </Fab>
-            <label htmlFor="goesFirst" className="pt-3 text-3xl">
-              Ai
-            </label>
-          </div>
+          <PlayerIconButton
+            whoGoesFirst={whoGoesFirst}
+            onClick={handleChange}
+            player="Player"
+          >
+            <SmartToy sx={{ boxShadow: "none", width: 70, height: 70 }} />
+          </PlayerIconButton>
         </div>
 
         <div

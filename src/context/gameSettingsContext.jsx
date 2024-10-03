@@ -1,4 +1,5 @@
 import { createContext, useState, useContext } from "react";
+import { MAX_MATCHES } from "../util/CONSTANTS";
 
 const GameSettingsContext = createContext();
 
@@ -9,11 +10,11 @@ export const useGameSettings = () => {
 
 export const GameSettingsProvider = ({ children }) => {
   const [whoGoesFirst, setWhoGoesFirst] = useState("Player");
-  const [matches, setMatches] = useState(25);
+  const [matches, setMatches] = useState(MAX_MATCHES);
 
   const reset = () => {
     setWhoGoesFirst("Player");
-    setMatches(25);
+    setMatches(MAX_MATCHES);
   };
 
   const value = {
