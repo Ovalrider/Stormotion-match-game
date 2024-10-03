@@ -97,12 +97,12 @@ const Game = () => {
 
   return (
     <div className="p-4" style={{ marginTop: "-75px" }}>
-      <h1 className="text-5xl font-bold mb-4">Matchstick Game</h1>
+      <h1 className="text-3xl font-bold mb-4">Matchstick Game</h1>
       <div className="flex justify-center mb-4 ">
-        <GiMatchHead size={150} color="#1769aa" />
+        <GiMatchHead size={100} color="#1769aa" />
       </div>
-      <p className="mb-2 text-3xl">Matches left: {matches}</p>
-      <p className="mt-4 text-2xl">Current player: {currentPlayer}</p>
+      <p className="mb-2 text-2xl">Matches left: {matches}</p>
+      <p className="mt-4 text-xl">Current player: {currentPlayer}</p>
       {gameOver ? (
         <p className="text-xl mt-5">
           {winner === "Player"
@@ -119,7 +119,7 @@ const Game = () => {
         className="flex items-center justify-evenly max-h-screen  mt-16 gap-40"
         sx={{ marginTop: -1 }}
       >
-        <Card variant="outlined" sx={{ width: 400, height: 500 }}>
+        <Card variant="outlined" sx={{ width: 300, height: 450 }}>
           <CardContent>
             <Box className="flex flex-col gap-14 mt-10  " alignItems="center">
               <p className="text-6xl" style={{ fontSize: "11rem" }}>
@@ -131,7 +131,7 @@ const Game = () => {
           </CardContent>
         </Card>
 
-        <Card variant="outlined" sx={{ width: 400, height: 500 }}>
+        <Card variant="outlined" sx={{ width: 300, height: 450 }}>
           <CardContent>
             <Box className="flex flex-col gap-14 mt-10" alignItems="center">
               <p className="text-6xl " style={{ fontSize: "11rem" }}>
@@ -158,7 +158,7 @@ const Game = () => {
         ))}
       </div>
 
-      <div className="fixed bottom-0 left-0 right-0 text-center mb-0 p-9 bg-gray-200 border border-solid border-gray-400">
+      <div className="fixed bottom-0 left-0 right-0 text-center m0 p-5 bg-gray-200 border border-solid border-gray-400">
         <CustomButton className="text-2xl" onClick={() => resetGame()}>
           Start again
         </CustomButton>
